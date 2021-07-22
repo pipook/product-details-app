@@ -1,0 +1,21 @@
+.Topbar {
+  background-color: #282c34;
+  padding: 24px 48px 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.Topbar > span {
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
+  float: left;
+  text-indent: -500px;
+  background-position: -10px -51px;
+  width: 97px;
+  height: 30px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
