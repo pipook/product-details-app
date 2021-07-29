@@ -9,10 +9,10 @@ const ProductPreview = (props) => {
 		<div className={classes.ProductPreview}>
 			<img src={props.currenPreviewImage} alt="Product Preview"/>
 			{
-				props.showHeartBeatSection 
+				props.showHeartBeatSection === 1
 				?
 				<div className={classes.HeartBeatSection}>
-					<i class="fas fa-heartbeat"></i>
+					<i className="fas fa-heartbeat"></i>
 					<p>78</p>
 				</div>
 				:

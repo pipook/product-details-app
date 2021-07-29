@@ -10,10 +10,13 @@ class App extends Component {
   state = {
     productData: ProductData,
     currenPreviewImagePos: 0,
-    showHeartBeatSection: false
+    showHeartBeatSection: 0
   }
   onColorOptionClick = (pos) => {
     this.setState({currenPreviewImagePos: pos});
+  }
+  onFeatureItemClick = (pos) => {
+    this.setState({showHeartBeatSection: pos});
   }
   render() {
     return (
@@ -26,7 +29,7 @@ class App extends Component {
           </div>
 
           <div className={classes.ProductData}>
-            <ProductDetails data={this.state.productData} onColorOptionClick={this.onColorOptionClick} />
+            <ProductDetails data={this.state.productData} onColorOptionClick={this.onColorOptionClick} currenPreviewImagePos={this.state.currenPreviewImagePos} onFeatureItemClick={this.onFeatureItemClick} showHeartBeatSection={this.state.showHeartBeatSection} />
           </div>
         </div>
       </div>
