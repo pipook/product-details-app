@@ -12,13 +12,26 @@ class App extends Component {
     currenPreviewImagePos: 0,
     showHeartBeatSection: 0
   }
+
   onColorOptionClick = (pos) => {
     this.setState({currenPreviewImagePos: pos});
   }
+
   onFeatureItemClick = (pos) => {
     this.setState({showHeartBeatSection: pos});
   }
+
+  shouldComponentUpdate(nextProps, nextState){
+    /*console.log('Next State => ', nextState);
+    console.log('Current State => ', this.state);*/
+    if(nextState.currenPreviewImagePos === this.state.currenPreviewImagePos){
+      return false;
+    }
+    return true;
+  }
+
   render() {
+    console.log('Rendering AppJs');
     return (
       <div className="App">
         <Topbar />
